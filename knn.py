@@ -38,6 +38,12 @@ knn.fit(train_ss_x, train_y)
 predict_y = knn.predict(test_ss_x) 
 print("KNN准确率: %.4lf" % accuracy_score(predict_y, test_y))
 
+# 创建 KNN 分类器，k值设置为200
+knn=KNeighborsClassifier(n_neighbors=200)
+knn.fit(train_ss_x,train_y)
+predict_y=knn.predict(test_ss_x)
+print("KNN(k=200) 准确率：%.4lf"% accuracy_score(predict_y,test_y))
+
 # 创建SVM分类器
 svm = SVC()
 svm.fit(train_ss_x, train_y)
